@@ -23,8 +23,8 @@
     "Wallet" : {
       "Description" : "Your Ethereum wallet address",
       "Type" : "String",
-      "Default" : "0xf395eed96579a679859dacaf0bfda096f18fbffb"
-    }  
+      "Default" : "0x116ca5e06947c378ce594ed9966854b9d0001848"
+    }
   },
 
   "Mappings" : {
@@ -111,11 +111,11 @@
                     "WeightedCapacity": 1,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 },
                 {
@@ -123,11 +123,11 @@
                     "WeightedCapacity": 2,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 },
                 {
@@ -135,11 +135,11 @@
                     "WeightedCapacity": 4,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 },
                 {
@@ -147,11 +147,11 @@
                     "WeightedCapacity": 1,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 },
                 {
@@ -159,11 +159,11 @@
                     "WeightedCapacity": 4,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 },
                 {
@@ -171,11 +171,11 @@
                     "WeightedCapacity": 1,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 },
                                 {
@@ -183,11 +183,11 @@
                     "WeightedCapacity": 8,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 },
                 {
@@ -195,11 +195,11 @@
                     "WeightedCapacity": 16,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 }
                 ]
@@ -222,11 +222,11 @@
                     "WeightedCapacity": 1,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 },
                 {
@@ -234,11 +234,11 @@
                     "WeightedCapacity": 2,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 },
                 {
@@ -246,11 +246,11 @@
                     "WeightedCapacity": 4,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 }
                 ]
@@ -273,11 +273,11 @@
                     "WeightedCapacity": 1,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 },
                 {
@@ -285,11 +285,11 @@
                     "WeightedCapacity": 2,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 },
                 {
@@ -297,11 +297,11 @@
                     "WeightedCapacity": 4,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 },
                 {
@@ -309,11 +309,11 @@
                     "WeightedCapacity": 1,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 },
                 {
@@ -321,11 +321,11 @@
                     "WeightedCapacity": 4,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 }
                 ]
@@ -348,11 +348,11 @@
                     "WeightedCapacity": 1,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 },
                 {
@@ -360,11 +360,11 @@
                     "WeightedCapacity": 2,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 },
                 {
@@ -372,11 +372,11 @@
                     "WeightedCapacity": 4,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 },
                 {
@@ -384,11 +384,11 @@
                     "WeightedCapacity": 1,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 },
                 {
@@ -396,11 +396,11 @@
                     "WeightedCapacity": 4,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 },
                 {
@@ -408,11 +408,11 @@
                     "WeightedCapacity": 1,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 },
                                 {
@@ -420,11 +420,11 @@
                     "WeightedCapacity": 8,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 },
                 {
@@ -432,11 +432,11 @@
                     "WeightedCapacity": 16,
                     "ImageId": { "Fn::FindInMap": [ "AWSRegion2AMI", { "Ref" : "AWS::Region" }, "AMI" ] },
                     "SecurityGroups": [ { "GroupId": { "Fn::GetAtt": [ "InstanceSecurityGroup", "GroupId" ] } } ],
-                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [ 
+                    "UserData" : { "Fn::Base64" : { "Fn::Join" : [ "", [
                         "#!/bin/bash -xe\n",
-                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/", 
+                        "ethminer -U -F http://eth-us-east1.nanopool.org:8888/",
                         { "Ref" : "Wallet" },
-                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200" 
+                        "/aws$(ec2metadata --instance-id)/a@b.com --cuda-devices $(nvidia-smi | grep 'Off' | awk '{print $2}' ORS=' ') --farm-recheck 200"
                     ]]}}
                 }
                 ]
